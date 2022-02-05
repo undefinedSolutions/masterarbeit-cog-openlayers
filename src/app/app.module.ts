@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TmsOrthoLindenrainComponent } from './tms/tms-ortho-lindenrain/tms-ortho-lindenrain.component';
+import { HomeComponent } from './home/home.component';
+import { TmsOrthoStrenzfeldComponent } from './tms/tms-ortho-strenzfeld/tms-ortho-strenzfeld.component';
+import { TmsDsmLindenrainComponent } from './tms/tms-dsm-lindenrain/tms-dsm-lindenrain.component';
+import { TmsDsmStrenzfeldComponent } from './tms/tms-dsm-strenzfeld/tms-dsm-strenzfeld.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TmsOrthoLindenrainComponent,
+    HomeComponent,
+    TmsOrthoStrenzfeldComponent,
+    TmsDsmLindenrainComponent,
+    TmsDsmStrenzfeldComponent
   ],
   imports: [
     BrowserModule,
