@@ -1,3 +1,4 @@
+[![Github Actions CI](https://github.com/undefinedSolutions/masterarbeit-cog-openlayers/actions/workflows/actions.yml/badge.svg)](https://github.com/undefinedSolutions/masterarbeit-cog-openlayers/actions/workflows/actions.yml)
 # MasterarbeitCogOpenlayers
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
