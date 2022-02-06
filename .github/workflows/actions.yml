@@ -57,4 +57,5 @@ jobs:
           aws-region: ${{ secrets.S3_BUCKET_REGION }}
 
       - name: Deploy
+        run: aws s3 rm --recursive s3://${{ secrets.S3_BUCKET }}
         run: aws s3 sync ./dist/masterarbeit-cog-openlayers s3://${{ secrets.S3_BUCKET }}
