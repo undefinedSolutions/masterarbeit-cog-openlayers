@@ -43,6 +43,6 @@ export class TmsOrthoStrenzfeldComponent implements AfterViewInit {
       }),
       target: this.map.nativeElement
     });
-    map.getView().fit(AoiStrenzfeld.extent);
+    map.getView().fit(AoiStrenzfeld.extent, { padding: [25, 25, 25, 25] });
   }
 }

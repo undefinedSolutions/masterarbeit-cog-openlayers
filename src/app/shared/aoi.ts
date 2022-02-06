@@ -17,7 +17,7 @@ export const AoiLindenrain = {
 }
 
 export const AoiStrenzfeld = {
-  attributions: "Institut für Geoinformation und Vermessung (IGV), <a href='https://gyrocopter.afg.hs-anhalt.de/' rel='noopener' target='_blank'>Hochschule Anhalt</a>",
+  attributions: 'Institut für Geoinformation und Vermessung (IGV), <a href="https://gyrocopter.afg.hs-anhalt.de/" rel="noopener" target="_blank">Hochschule Anhalt</a>',
   dsm: {
     min: 0,
     max: 19,

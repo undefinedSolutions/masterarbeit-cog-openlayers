@@ -41,6 +41,6 @@ export class TmsDsmLindenrainComponent implements AfterViewInit {
       }),
       target: this.map.nativeElement
     });
-    map.getView().fit(AoiLindenrain.extent);
+    map.getView().fit(AoiLindenrain.extent, { padding: [25, 25, 25, 25] });
   }
 }
