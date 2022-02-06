@@ -19,12 +19,12 @@ export class TmsDsmStrenzfeldComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const TMS = new TileLayer({
       extent: AoiStrenzfeld.extent,
-      minZoom: AoiStrenzfeld.ortho.min,
-      maxZoom: AoiStrenzfeld.ortho.max,
+      preload: Infinity,
       source: new XYZ({
         attributions: AoiStrenzfeld.attributions,
-        url:
-          'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/tms/dsm_strenzfeld/{z}/{x}/{-y}.png'
+        maxZoom: AoiStrenzfeld.dsm.max,
+        minZoom: AoiStrenzfeld.dsm.min,
+        url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/tms/dsm_strenzfeld/{z}/{x}/{-y}.png'
       }),
     })
     const map = new Map({

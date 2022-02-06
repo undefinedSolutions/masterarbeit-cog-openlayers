@@ -19,12 +19,12 @@ export class TmsDsmLindenrainComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const TMS = new TileLayer({
       extent: AoiLindenrain.extent,
-      minZoom: AoiLindenrain.ortho.min,
-      maxZoom: AoiLindenrain.ortho.max,
+      preload: Infinity,
       source: new XYZ({
         attributions: AoiLindenrain.attributions,
-        url:
-          'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/tms/dsm_lindenrain/{z}/{x}/{-y}.png'
+        maxZoom: AoiLindenrain.ortho.max,
+        minZoom: AoiLindenrain.ortho.min,
+        url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/tms/dsm_lindenrain/{z}/{x}/{-y}.png',
       }),
     })
     const map = new Map({
