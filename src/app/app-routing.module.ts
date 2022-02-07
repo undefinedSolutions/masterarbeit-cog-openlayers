@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
+
+import { CogOrthoLindenrainComponent } from './cog/cog-ortho-lindenrain/cog-ortho-lindenrain.component';
+
 import { TmsDsmLindenrainComponent } from './tms/tms-dsm-lindenrain/tms-dsm-lindenrain.component';
 import { TmsDsmStrenzfeldComponent } from './tms/tms-dsm-strenzfeld/tms-dsm-strenzfeld.component';
 import { TmsOrthoLindenrainComponent } from './tms/tms-ortho-lindenrain/tms-ortho-lindenrain.component';
@@ -17,6 +20,11 @@ const routes: Routes = [
     path: 'home',
     data: { title: 'HOME' },
     component: HomeComponent
+  },
+  // COG
+  {
+    path: 'cog/ortho_lindenrain',
+    component: CogOrthoLindenrainComponent
   },
   // TMS
   {
