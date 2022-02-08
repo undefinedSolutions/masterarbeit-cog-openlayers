@@ -1,4 +1,4 @@
-import { AoiLindenrain } from './../../shared/aoi';
+import { AoiStrenzfeld } from './../../shared/aoi';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 
 
@@ -11,26 +11,26 @@ import OSM from 'ol/source/OSM';
 import GeoTIFF from 'ol/source/GeoTIFF';
 import TileLayer from 'ol/layer/WebGLTile';
 
+
 @Component({
-  selector: 'app-cog-ortho-lindenrain',
-  templateUrl: './cog-ortho-lindenrain.component.html',
-  styleUrls: ['./cog-ortho-lindenrain.component.scss']
+  selector: 'app-cog-ortho-strenzfeld',
+  templateUrl: './cog-ortho-strenzfeld.component.html',
+  styleUrls: ['./cog-ortho-strenzfeld.component.scss']
 })
-export class CogOrthoLindenrainComponent implements AfterViewInit {
+export class CogOrthoStrenzfeldComponent implements AfterViewInit {
   @ViewChild('map', { static: false }) map!: ElementRef;
 
   ngAfterViewInit(): void {
     const cog = new TileLayer({
-      extent: AoiLindenrain.extent,
+      extent: AoiStrenzfeld.extent,
       source: new GeoTIFF({
         sources: [
           {
-            url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/cog/ortho_lindenrain.tif'
+            url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/cog/ortho_strenzfeld.tif'
           },
         ],
       })
     })
-    cog.getSource().setAttributions(AoiLindenrain.attributions);
     const map = new Map({
       layers: [
         new TileLayer({source: new OSM()}),
@@ -38,13 +38,13 @@ export class CogOrthoLindenrainComponent implements AfterViewInit {
       ],
       view: new View({
         center: [
-          AoiLindenrain.extent[0] + ( AoiLindenrain.extent[2] - AoiLindenrain.extent[0] ) / 2,
-          AoiLindenrain.extent[1] + ( AoiLindenrain.extent[3] - AoiLindenrain.extent[1] ) / 2
+          AoiStrenzfeld.extent[0] + ( AoiStrenzfeld.extent[2] - AoiStrenzfeld.extent[0] ) / 2,
+          AoiStrenzfeld.extent[1] + ( AoiStrenzfeld.extent[3] - AoiStrenzfeld.extent[1] ) / 2
         ],
-        zoom: 0
+        zoom: 14
       }),
       target: this.map.nativeElement
     });
-    map.getView().fit(AoiLindenrain.extent, { padding: [25, 25, 25, 25] });
+    map.getView().fit(AoiStrenzfeld.extent, { padding: [25, 25, 25, 25] });
   }
 }

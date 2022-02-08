@@ -9,6 +9,7 @@ import { TmsOrthoStrenzfeldComponent } from './tms/tms-ortho-strenzfeld/tms-orth
 import { TmsDsmLindenrainComponent } from './tms/tms-dsm-lindenrain/tms-dsm-lindenrain.component';
 import { TmsDsmStrenzfeldComponent } from './tms/tms-dsm-strenzfeld/tms-dsm-strenzfeld.component';
 import { CogOrthoLindenrainComponent } from './cog/cog-ortho-lindenrain/cog-ortho-lindenrain.component';
+import { CogOrthoStrenzfeldComponent } from './cog/cog-ortho-strenzfeld/cog-ortho-strenzfeld.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CogOrthoLindenrainComponent } from './cog/cog-ortho-lindenrain/cog-orth
     TmsOrthoStrenzfeldComponent,
     TmsDsmLindenrainComponent,
     TmsDsmStrenzfeldComponent,
-    CogOrthoLindenrainComponent
+    CogOrthoLindenrainComponent,
+    CogOrthoStrenzfeldComponent
   ],
   imports: [
     BrowserModule,
