@@ -28,6 +28,7 @@ export class CogDsmLindenrainComponent implements AfterViewInit {
         },
       ],
     });
+    sourceCOG.setAttributions(AoiLindenrain.attributions);
     console.log(sourceCOG.getRevision())
     const layer = new TileLayer({
       source: sourceCOG,
