@@ -29,9 +29,9 @@ export class CogDmsStrenzfeldStyleComponent implements AfterViewInit {
         // Angabe welches Band betrachtet wird
         ['band', 1],
         // Höhenwerte gefolgt von RGB(A)-Farbwerten
-        0,
+        60,
         [0, 0, 0, 0],
-        57.34,
+        60,
         [43, 131, 186],
         69.505,
         [171, 221, 164],
@@ -50,9 +50,9 @@ export class CogDmsStrenzfeldStyleComponent implements AfterViewInit {
         // Angabe welches Band betrachtet wird
         ['band', 1],
         // Höhenwerte gefolgt von RGB(A)-Farbwerten
-        0,
+        60,
         [0, 0, 0, 0],
-        57.34,
+        60,
         [215, 25, 28],
         69.505,
         [253, 174, 97],
