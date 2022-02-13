@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    window.location.href = 'https://masterarbeit-cog.undefined-solutions.de/';
+    window.location.href = 'https://masterarbeit-cog.de/';
   }
 
 }

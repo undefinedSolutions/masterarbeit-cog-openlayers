@@ -1,3 +1,4 @@
+import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/cog-dms-strenzfeld-style.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'cog/dsm_strenzfeld',
     component: CogDsmStrenzfeldComponent 
+  },
+  {
+    path: 'cog/dsm_strenzfeld_style',
+    component: CogDmsStrenzfeldStyleComponent 
   },
   {
     path: 'cog/ortho_lindenrain',
