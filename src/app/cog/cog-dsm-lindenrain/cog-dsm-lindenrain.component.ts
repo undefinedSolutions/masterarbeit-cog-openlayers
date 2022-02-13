@@ -38,7 +38,7 @@ export class CogDsmLindenrainComponent implements AfterViewInit {
           ['linear'],
           ['band', 1],
           // Colors
-          0,
+          600.96,
           [0, 0, 0, 0],
           600.97,
           [43, 131, 186],

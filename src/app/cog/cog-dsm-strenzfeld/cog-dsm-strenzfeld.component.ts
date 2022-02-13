@@ -37,9 +37,9 @@ export class CogDsmStrenzfeldComponent implements AfterViewInit {
           ['linear'],
           ['band', 1],
           // Colors
-          0,
+          60,
           [0, 0, 0, 0],
-          57.34,
+          60,
           [43, 131, 186],
           69.505,
           [171, 221, 164],
