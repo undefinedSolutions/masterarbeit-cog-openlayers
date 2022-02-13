@@ -14,6 +14,7 @@ import { TmsDsmLindenrainComponent } from './tms/tms-dsm-lindenrain/tms-dsm-lind
 import { TmsDsmStrenzfeldComponent } from './tms/tms-dsm-strenzfeld/tms-dsm-strenzfeld.component';
 import { TmsOrthoLindenrainComponent } from './tms/tms-ortho-lindenrain/tms-ortho-lindenrain.component';
 import { TmsOrthoStrenzfeldComponent } from './tms/tms-ortho-strenzfeld/tms-ortho-strenzfeld.component';
+import { WmsDsmStrenzfeldComponent } from './wms/wms-dsm-strenzfeld/wms-dsm-strenzfeld.component';
 
 const routes: Routes = [
   { // Root redirect to home
@@ -59,7 +60,12 @@ const routes: Routes = [
   {
     path: 'tms/ortho_strenzfeld',
     component: TmsOrthoStrenzfeldComponent 
-  }
+  },
+  // WMS
+  {
+    path: 'wms/dsm_strenzfeld',
+    component: WmsDsmStrenzfeldComponent
+  },
 ];
 
 @NgModule({
