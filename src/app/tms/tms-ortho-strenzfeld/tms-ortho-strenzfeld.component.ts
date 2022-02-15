@@ -26,7 +26,7 @@ export class TmsOrthoStrenzfeldComponent implements AfterViewInit {
         attributions: AoiStrenzfeld.attributions,
         minZoom: AoiStrenzfeld.ortho.min,
         maxZoom: AoiStrenzfeld.ortho.max,
-        url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/tms/ortho_strenzfeld/{z}/{x}/{-y}.png'
+        url: 'https://data.masterarbeit-cog.de/tms/ortho_strenzfeld/{z}/{x}/{-y}.png'
       }),
     })
     const map = new Map({

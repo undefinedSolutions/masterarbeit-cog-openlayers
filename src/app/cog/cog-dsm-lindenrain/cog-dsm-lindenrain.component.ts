@@ -24,7 +24,7 @@ export class CogDsmLindenrainComponent implements AfterViewInit {
       normalize: false,
       sources: [
         {
-          url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/cog/dsm_lindenrain.tif',
+          url: 'https://data.masterarbeit-cog.de/cog/dsm_lindenrain.tif',
         },
       ],
     });

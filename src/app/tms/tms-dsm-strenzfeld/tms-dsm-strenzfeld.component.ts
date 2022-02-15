@@ -24,7 +24,7 @@ export class TmsDsmStrenzfeldComponent implements AfterViewInit {
         attributions: AoiStrenzfeld.attributions,
         maxZoom: AoiStrenzfeld.dsm.max,
         minZoom: AoiStrenzfeld.dsm.min,
-        url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/tms/dsm_strenzfeld/{z}/{x}/{-y}.png'
+        url: 'https://data.masterarbeit-cog.de/tms/dsm_strenzfeld/{z}/{x}/{-y}.png'
       }),
     })
     const map = new Map({

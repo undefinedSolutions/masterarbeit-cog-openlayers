@@ -23,7 +23,7 @@ export class CogDsmStrenzfeldComponent implements AfterViewInit {
       normalize: false,
       sources: [
         {
-          url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/cog/dsm_strenzfeld_3857_35cm.tif',
+          url: 'https://data.masterarbeit-cog.de/cog/dsm_strenzfeld.tif',
         },
       ],
     });
@@ -37,18 +37,18 @@ export class CogDsmStrenzfeldComponent implements AfterViewInit {
           ['linear'],
           ['band', 1],
           // Colors
-          60,
+          57,
           [0, 0, 0, 0],
-          60,
-          [43, 131, 186],
-          69.505,
-          [171, 221, 164],
-          81.67,
-          [255, 255, 191],
-          93.835,
-          [253, 174, 97],
-          106,
-          [215, 25, 28],
+          57,
+          [44, 129, 184],
+          70.75,
+          [171, 223, 167],
+          84.5,
+          [255, 255, 195],
+          98.25,
+          [253, 178, 103],
+          112,
+          [215, 16 ,29],
         ],
       },
     });

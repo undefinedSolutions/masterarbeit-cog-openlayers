@@ -26,7 +26,7 @@ export class TmsOrthoLindenrainComponent implements AfterViewInit {
         attributions: AoiLindenrain.attributions,
         minZoom: AoiLindenrain.ortho.min,
         maxZoom: AoiLindenrain.ortho.max,
-        url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/tms/ortho_lindenrain/{z}/{x}/{-y}.png'
+        url: 'https://data.masterarbeit-cog.de/tms/ortho_lindenrain/{z}/{x}/{-y}.png'
       }),
     })
     const map = new Map({

@@ -26,7 +26,7 @@ export class CogOrthoStrenzfeldComponent implements AfterViewInit {
       source: new GeoTIFF({
         sources: [
           {
-            url: 'https://masterarbeit-cog.s3.eu-central-1.amazonaws.com/cog/ortho_strenzfeld.tif'
+            url: 'https://data.masterarbeit-cog.de/cog/ortho_strenzfeld.tif'
           },
         ],
       })
