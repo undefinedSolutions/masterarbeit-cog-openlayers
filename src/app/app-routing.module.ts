@@ -10,6 +10,12 @@ import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/c
 import { CogOrthoLindenrainComponent } from './cog/cog-ortho-lindenrain/cog-ortho-lindenrain.component';
 import { CogOrthoStrenzfeldComponent } from './cog/cog-ortho-strenzfeld/cog-ortho-strenzfeld.component';
 
+// COG-WMS
+import { CogwmsDsmLindenrainComponent } from './cogwms/cogwms-dsm-lindenrain/cogwms-dsm-lindenrain.component';
+import { CogwmsDsmStrenzfeldComponent } from './cogwms/cogwms-dsm-strenzfeld/cogwms-dsm-strenzfeld.component';
+import { CogwmsOrthoLindenrainComponent } from './cogwms/cogwms-ortho-lindenrain/cogwms-ortho-lindenrain.component';
+import { CogwmsOrthoStrenzfeldComponent } from './cogwms/cogwms-ortho-strenzfeld/cogwms-ortho-strenzfeld.component';
+
 // TMS
 import { TmsDsmLindenrainComponent } from './tms/tms-dsm-lindenrain/tms-dsm-lindenrain.component';
 import { TmsDsmStrenzfeldComponent } from './tms/tms-dsm-strenzfeld/tms-dsm-strenzfeld.component';
@@ -59,6 +65,23 @@ const routes: Routes = [
   {
     path: 'cog/ortho_strenzfeld',
     component: CogOrthoStrenzfeldComponent
+  },
+  // COG-WMS
+  {
+    path: 'cog-wms/dsm_lindenrain',
+    component: CogwmsDsmLindenrainComponent
+  },
+  {
+    path: 'cog-wms/dsm_strenzfeld',
+    component: CogwmsDsmStrenzfeldComponent 
+  },
+  {
+    path: 'cog-wms/ortho_lindenrain',
+    component: CogwmsOrthoLindenrainComponent
+  },
+  {
+    path: 'cog-wms/ortho_strenzfeld',
+    component: CogwmsOrthoStrenzfeldComponent
   },
   // TMS
   {
