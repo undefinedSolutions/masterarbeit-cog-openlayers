@@ -35,7 +35,6 @@ export class CogDsmStrenzfeldComponent implements AfterViewInit {
       ],
     });
     sourceCOG.setAttributions(AoiStrenzfeld.attributions);
-    console.log(sourceCOG.getRevision())
     const layer = new TileLayer({
       source: sourceCOG,
       style: {

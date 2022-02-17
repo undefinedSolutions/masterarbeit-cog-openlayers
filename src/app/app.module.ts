@@ -14,6 +14,9 @@ import { CogDsmStrenzfeldComponent } from './cog/cog-dsm-strenzfeld/cog-dsm-stre
 import { CogDsmLindenrainComponent } from './cog/cog-dsm-lindenrain/cog-dsm-lindenrain.component';
 import { WmsDsmStrenzfeldComponent } from './wms/wms-dsm-strenzfeld/wms-dsm-strenzfeld.component';
 import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/cog-dms-strenzfeld-style.component';
+import { WmsDsmLindenrainComponent } from './wms/wms-dsm-lindenrain/wms-dsm-lindenrain.component';
+import { WmsOrthoLindenrainComponent } from './wms/wms-ortho-lindenrain/wms-ortho-lindenrain.component';
+import { WmsOrthoStrenzfeldComponent } from './wms/wms-ortho-strenzfeld/wms-ortho-strenzfeld.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/c
     CogDsmStrenzfeldComponent,
     CogDsmLindenrainComponent,
     WmsDsmStrenzfeldComponent,
-    CogDmsStrenzfeldStyleComponent
+    CogDmsStrenzfeldStyleComponent,
+    WmsDsmLindenrainComponent,
+    WmsOrthoLindenrainComponent,
+    WmsOrthoStrenzfeldComponent
   ],
   imports: [
     BrowserModule,

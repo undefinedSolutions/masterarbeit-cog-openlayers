@@ -21,7 +21,7 @@ export const AoiLindenrain = {
   attributions: "undefined Solutions GmbH",
   dsm: {
     min: 0,
-    max: 20
+    max: 21
   },
   extent: {
     i0:  [975839, 6220091, 977070, 6220877],

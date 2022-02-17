@@ -1,4 +1,4 @@
-import { AoiStrenzfeld, getExtent } from '../../shared/aoi';
+import { AoiLindenrain, getExtent } from '../../shared/aoi';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -11,11 +11,11 @@ import {Image as ImageLayer, Tile as TileLayer} from 'ol/layer';
 import ImageWMS from 'ol/source/ImageWMS';
 
 @Component({
-  selector: 'app-wms-dsm-strenzfeld',
-  templateUrl: './wms-dsm-strenzfeld.component.html',
-  styleUrls: ['./wms-dsm-strenzfeld.component.scss']
+  selector: 'app-wms-dsm-lindenrain',
+  templateUrl: './wms-dsm-lindenrain.component.html',
+  styleUrls: ['./wms-dsm-lindenrain.component.scss']
 })
-export class WmsDsmStrenzfeldComponent implements AfterViewInit {
+export class WmsDsmLindenrainComponent implements AfterViewInit {
   @ViewChild('map', { static: false }) map!: ElementRef;
   z: number;
 
@@ -27,11 +27,11 @@ export class WmsDsmStrenzfeldComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     const WMS = new ImageLayer({
-      extent: AoiStrenzfeld.extent.i0,
+      extent: AoiLindenrain.extent.i0,
       source: new ImageWMS({
-        attributions: AoiStrenzfeld.attributions,
+        attributions: AoiLindenrain.attributions,
         url: 'http://geoserver.masterarbeit-cog.de/wms',
-        params: {'LAYERS': '	wms:dsm_strenzfeld'},
+        params: {'LAYERS': '	wms:dsm_lindenrain'},
         ratio: 1,
         serverType: 'geoserver',
       }),
@@ -43,13 +43,13 @@ export class WmsDsmStrenzfeldComponent implements AfterViewInit {
       ],
       view: new View({
         center: [
-          AoiStrenzfeld.extent.i0[0] + ( AoiStrenzfeld.extent.i0[2] - AoiStrenzfeld.extent.i0[0] ) / 2,
-          AoiStrenzfeld.extent.i0[1] + ( AoiStrenzfeld.extent.i0[3] - AoiStrenzfeld.extent.i0[1] ) / 2
+          AoiLindenrain.extent.i0[0] + ( AoiLindenrain.extent.i0[2] - AoiLindenrain.extent.i0[0] ) / 2,
+          AoiLindenrain.extent.i0[1] + ( AoiLindenrain.extent.i0[3] - AoiLindenrain.extent.i0[1] ) / 2
         ],
         zoom: 14
       }),
       target: this.map.nativeElement
     });
-    getExtent(map, this.z, AoiStrenzfeld.dsm.max, AoiStrenzfeld);
+    getExtent(map, this.z, AoiLindenrain.dsm.max, AoiLindenrain);
   }
 }

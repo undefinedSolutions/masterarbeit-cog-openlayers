@@ -11,11 +11,11 @@ import {Image as ImageLayer, Tile as TileLayer} from 'ol/layer';
 import ImageWMS from 'ol/source/ImageWMS';
 
 @Component({
-  selector: 'app-wms-dsm-strenzfeld',
-  templateUrl: './wms-dsm-strenzfeld.component.html',
-  styleUrls: ['./wms-dsm-strenzfeld.component.scss']
+  selector: 'app-wms-ortho-strenzfeld',
+  templateUrl: './wms-ortho-strenzfeld.component.html',
+  styleUrls: ['./wms-ortho-strenzfeld.component.scss']
 })
-export class WmsDsmStrenzfeldComponent implements AfterViewInit {
+export class WmsOrthoStrenzfeldComponent implements AfterViewInit {
   @ViewChild('map', { static: false }) map!: ElementRef;
   z: number;
 
@@ -31,7 +31,7 @@ export class WmsDsmStrenzfeldComponent implements AfterViewInit {
       source: new ImageWMS({
         attributions: AoiStrenzfeld.attributions,
         url: 'http://geoserver.masterarbeit-cog.de/wms',
-        params: {'LAYERS': '	wms:dsm_strenzfeld'},
+        params: {'LAYERS': '	wms:ortho_strenzfeld'},
         ratio: 1,
         serverType: 'geoserver',
       }),
@@ -50,6 +50,6 @@ export class WmsDsmStrenzfeldComponent implements AfterViewInit {
       }),
       target: this.map.nativeElement
     });
-    getExtent(map, this.z, AoiStrenzfeld.dsm.max, AoiStrenzfeld);
+    getExtent(map, this.z, AoiStrenzfeld.ortho.max, AoiStrenzfeld);
   }
 }
