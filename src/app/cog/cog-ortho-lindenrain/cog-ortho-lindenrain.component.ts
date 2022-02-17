@@ -1,7 +1,6 @@
-import { AoiLindenrain } from './../../shared/aoi';
+import { AoiLindenrain, getExtent } from './../../shared/aoi';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-
-
+import { ActivatedRoute } from '@angular/router';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -18,10 +17,17 @@ import TileLayer from 'ol/layer/WebGLTile';
 })
 export class CogOrthoLindenrainComponent implements AfterViewInit {
   @ViewChild('map', { static: false }) map!: ElementRef;
+  z: number;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParamMap.subscribe((params) => {
+      this.z = Number(params.get('z'));
+    })
+  }
 
   ngAfterViewInit(): void {
     const cog = new TileLayer({
-      extent: AoiLindenrain.extent,
+      extent: AoiLindenrain.extent.i0,
       source: new GeoTIFF({
         sources: [
           {
@@ -38,13 +44,13 @@ export class CogOrthoLindenrainComponent implements AfterViewInit {
       ],
       view: new View({
         center: [
-          AoiLindenrain.extent[0] + ( AoiLindenrain.extent[2] - AoiLindenrain.extent[0] ) / 2,
-          AoiLindenrain.extent[1] + ( AoiLindenrain.extent[3] - AoiLindenrain.extent[1] ) / 2
+          AoiLindenrain.extent.i0[0] + ( AoiLindenrain.extent.i0[2] - AoiLindenrain.extent.i0[0] ) / 2,
+          AoiLindenrain.extent.i0[1] + ( AoiLindenrain.extent.i0[3] - AoiLindenrain.extent.i0[1] ) / 2
         ],
         zoom: 0
       }),
       target: this.map.nativeElement
     });
-    map.getView().fit(AoiLindenrain.extent, { padding: [25, 25, 25, 25] });
+    getExtent(map, this.z, AoiLindenrain.ortho.max, AoiLindenrain);
   }
 }

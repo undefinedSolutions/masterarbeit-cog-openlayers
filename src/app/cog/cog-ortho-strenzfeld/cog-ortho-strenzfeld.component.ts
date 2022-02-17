@@ -1,7 +1,6 @@
-import { AoiStrenzfeld } from './../../shared/aoi';
+import { AoiStrenzfeld, getExtent } from './../../shared/aoi';
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-
-
+import { ActivatedRoute } from '@angular/router';
 
 import Map from 'ol/Map';
 import View from 'ol/View';
@@ -11,7 +10,6 @@ import OSM from 'ol/source/OSM';
 import GeoTIFF from 'ol/source/GeoTIFF';
 import TileLayer from 'ol/layer/WebGLTile';
 
-
 @Component({
   selector: 'app-cog-ortho-strenzfeld',
   templateUrl: './cog-ortho-strenzfeld.component.html',
@@ -19,10 +17,17 @@ import TileLayer from 'ol/layer/WebGLTile';
 })
 export class CogOrthoStrenzfeldComponent implements AfterViewInit {
   @ViewChild('map', { static: false }) map!: ElementRef;
+  z: number;
+
+  constructor(private route: ActivatedRoute) {
+    this.route.queryParamMap.subscribe((params) => {
+      this.z = Number(params.get('z'));
+    })
+  }
 
   ngAfterViewInit(): void {
     const cog = new TileLayer({
-      extent: AoiStrenzfeld.extent,
+      extent: AoiStrenzfeld.extent.i0,
       source: new GeoTIFF({
         sources: [
           {
@@ -39,13 +44,13 @@ export class CogOrthoStrenzfeldComponent implements AfterViewInit {
       ],
       view: new View({
         center: [
-          AoiStrenzfeld.extent[0] + ( AoiStrenzfeld.extent[2] - AoiStrenzfeld.extent[0] ) / 2,
-          AoiStrenzfeld.extent[1] + ( AoiStrenzfeld.extent[3] - AoiStrenzfeld.extent[1] ) / 2
+          AoiStrenzfeld.extent.i0[0] + ( AoiStrenzfeld.extent.i0[2] - AoiStrenzfeld.extent.i0[0] ) / 2,
+          AoiStrenzfeld.extent.i0[1] + ( AoiStrenzfeld.extent.i0[3] - AoiStrenzfeld.extent.i0[1] ) / 2
         ],
         zoom: 14
       }),
       target: this.map.nativeElement
     });
-    map.getView().fit(AoiStrenzfeld.extent, { padding: [25, 25, 25, 25] });
+    getExtent(map, this.z, AoiStrenzfeld.ortho.max, AoiStrenzfeld);
   }
 }
