@@ -46,7 +46,7 @@ export class WmsDsmLindenrainComponent implements AfterViewInit {
           AoiLindenrain.extent.i0[0] + ( AoiLindenrain.extent.i0[2] - AoiLindenrain.extent.i0[0] ) / 2,
           AoiLindenrain.extent.i0[1] + ( AoiLindenrain.extent.i0[3] - AoiLindenrain.extent.i0[1] ) / 2
         ],
-        zoom: 14
+        zoom: 0
       }),
       target: this.map.nativeElement
     });

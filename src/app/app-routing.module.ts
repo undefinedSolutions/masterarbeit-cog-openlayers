@@ -1,4 +1,3 @@
-import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/cog-dms-strenzfeld-style.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -7,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 // COG
 import { CogDsmLindenrainComponent } from './cog/cog-dsm-lindenrain/cog-dsm-lindenrain.component';
 import { CogDsmStrenzfeldComponent } from './cog/cog-dsm-strenzfeld/cog-dsm-strenzfeld.component';
+import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/cog-dms-strenzfeld-style.component';
 import { CogOrthoLindenrainComponent } from './cog/cog-ortho-lindenrain/cog-ortho-lindenrain.component';
 import { CogOrthoStrenzfeldComponent } from './cog/cog-ortho-strenzfeld/cog-ortho-strenzfeld.component';
 
@@ -15,11 +15,18 @@ import { TmsDsmLindenrainComponent } from './tms/tms-dsm-lindenrain/tms-dsm-lind
 import { TmsDsmStrenzfeldComponent } from './tms/tms-dsm-strenzfeld/tms-dsm-strenzfeld.component';
 import { TmsOrthoLindenrainComponent } from './tms/tms-ortho-lindenrain/tms-ortho-lindenrain.component';
 import { TmsOrthoStrenzfeldComponent } from './tms/tms-ortho-strenzfeld/tms-ortho-strenzfeld.component';
+
 // WMS
 import { WmsDsmLindenrainComponent } from './wms/wms-dsm-lindenrain/wms-dsm-lindenrain.component';
 import { WmsDsmStrenzfeldComponent } from './wms/wms-dsm-strenzfeld/wms-dsm-strenzfeld.component';
 import { WmsOrthoLindenrainComponent } from './wms/wms-ortho-lindenrain/wms-ortho-lindenrain.component';
 import { WmsOrthoStrenzfeldComponent } from './wms/wms-ortho-strenzfeld/wms-ortho-strenzfeld.component';
+
+// WMTS
+import { WmtsDsmLindenrainComponent } from './wmts/wmts-dsm-lindenrain/wmts-dsm-lindenrain.component';
+import { WmtsOrthoStrenzfeldComponent } from './wmts/wmts-ortho-strenzfeld/wmts-ortho-strenzfeld.component';
+import { WmtsOrthoLindenrainComponent } from './wmts/wmts-ortho-lindenrain/wmts-ortho-lindenrain.component';
+import { WmtsDsmStrenzfeldComponent } from './wmts/wmts-dsm-strenzfeld/wmts-dsm-strenzfeld.component';
 
 const routes: Routes = [
   { // Root redirect to home
@@ -86,6 +93,23 @@ const routes: Routes = [
   {
     path: 'wms/ortho_strenzfeld',
     component: WmsOrthoStrenzfeldComponent
+  },
+  //WMTS
+  {
+    path: 'wmts/dsm_lindenrain',
+    component: WmtsDsmLindenrainComponent
+  },
+  {
+    path: 'wmts/dsm_strenzfeld',
+    component: WmtsDsmStrenzfeldComponent
+  },
+  {
+    path: 'wmts/ortho_lindenrain',
+    component: WmtsOrthoLindenrainComponent
+  },
+  {
+    path: 'wmts/ortho_strenzfeld',
+    component: WmtsOrthoStrenzfeldComponent
   },
   { // 404 Not found primary
     path: '**',

@@ -45,7 +45,7 @@ export class TmsDsmStrenzfeldComponent implements AfterViewInit {
           AoiStrenzfeld.extent.i0[0] + ( AoiStrenzfeld.extent.i0[2] - AoiStrenzfeld.extent.i0[0] ) / 2,
           AoiStrenzfeld.extent.i0[1] + ( AoiStrenzfeld.extent.i0[3] - AoiStrenzfeld.extent.i0[1] ) / 2
         ],
-        zoom: 14
+        zoom: 0
       }),
       target: this.map.nativeElement
     });
