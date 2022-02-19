@@ -28,6 +28,9 @@ import { WmsDsmStrenzfeldComponent } from './wms/wms-dsm-strenzfeld/wms-dsm-stre
 import { WmsOrthoLindenrainComponent } from './wms/wms-ortho-lindenrain/wms-ortho-lindenrain.component';
 import { WmsOrthoStrenzfeldComponent } from './wms/wms-ortho-strenzfeld/wms-ortho-strenzfeld.component';
 
+// WMS-32632
+import { Wms32632OrthoStrenzfeldComponent } from './wms32632/wms32632-ortho-strenzfeld/wms32632-ortho-strenzfeld.component';
+
 // WMTS
 import { WmtsDsmLindenrainComponent } from './wmts/wmts-dsm-lindenrain/wmts-dsm-lindenrain.component';
 import { WmtsOrthoStrenzfeldComponent } from './wmts/wmts-ortho-strenzfeld/wmts-ortho-strenzfeld.component';
@@ -116,6 +119,11 @@ const routes: Routes = [
   {
     path: 'wms/ortho_strenzfeld',
     component: WmsOrthoStrenzfeldComponent
+  },
+  // WMS
+  {
+    path: 'wms-32632/ortho_strenzfeld',
+    component: Wms32632OrthoStrenzfeldComponent 
   },
   //WMTS
   {
