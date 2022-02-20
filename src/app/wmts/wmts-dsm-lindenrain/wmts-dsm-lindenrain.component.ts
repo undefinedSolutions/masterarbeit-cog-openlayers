@@ -40,6 +40,7 @@ export class WmtsDsmLindenrainComponent implements AfterViewInit {
       matrixIds[z] = z;
     }
     const WMTSLayer = new TileLayer({
+      extent: AoiLindenrain.extent.i0,
       source: new WMTS({
         attributions: AoiLindenrain.attributions,
         url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts',
@@ -53,7 +54,6 @@ export class WmtsDsmLindenrainComponent implements AfterViewInit {
           matrixIds: matrixIds,
         }),
         style: '',
-        wrapX: true,
       }),
     });
     const map = new Map({

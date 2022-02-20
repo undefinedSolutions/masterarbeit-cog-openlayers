@@ -40,6 +40,7 @@ export class WmtsOrthoStrenzfeldComponent implements AfterViewInit {
       matrixIds[z] = z;
     }
     const WMTSLayer = new TileLayer({
+      extent: AoiStrenzfeld.extent.i0,
       source: new WMTS({
         attributions: AoiStrenzfeld.attributions,
         url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts',
@@ -53,7 +54,6 @@ export class WmtsOrthoStrenzfeldComponent implements AfterViewInit {
           matrixIds: matrixIds,
         }),
         style: '',
-        wrapX: true,
       }),
     });
     const map = new Map({
