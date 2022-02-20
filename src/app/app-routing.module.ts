@@ -126,7 +126,7 @@ const routes: Routes = [
     path: 'wms/ortho_strenzfeld',
     component: WmsOrthoStrenzfeldComponent
   },
-  // WMS
+  // WMS-32632
   {
     path: 'wms-32632/ortho_strenzfeld',
     component: Wms32632OrthoStrenzfeldComponent 

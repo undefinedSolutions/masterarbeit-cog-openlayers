@@ -27,7 +27,6 @@ export class TmsOrthoStrenzfeldComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const TMS = new TileLayer({
       extent: AoiStrenzfeld.extent.i0,
-      preload: Infinity,
       source: new XYZ({
         attributions: AoiStrenzfeld.attributions,
         minZoom: AoiStrenzfeld.ortho.min,

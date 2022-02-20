@@ -27,7 +27,6 @@ export class WmtstmsOrthoLindenrainComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const TMS = new TileLayer({
       extent: AoiLindenrain.extent.i0,
-      preload: Infinity,
       source: new XYZ({
         attributions: AoiLindenrain.attributions,
         minZoom: AoiLindenrain.ortho.min,
