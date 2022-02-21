@@ -46,7 +46,7 @@ export class WmtsOrthoLindenrainComponent implements AfterViewInit {
         url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts',
         layer: 'wmts:ortho_lindenrain',
         matrixSet: 'WebMercatorQuad_z23',
-        format: 'image/png',
+        format: 'image/vnd.jpeg-png',
         projection: projection,
         tileGrid: new WMTSTileGrid({
           origin: getTopLeft(projectionExtent),
