@@ -31,7 +31,7 @@ export class CogOrthoLindenrainComponent implements AfterViewInit {
       source: new GeoTIFF({
         sources: [
           {
-            url: 'https://data.masterarbeit-cog.de/cog/ortho_lindenrain_512.tif'
+            url: 'https://data.masterarbeit-cog.de/cog/ortho_lindenrain.tif'
           },
         ],
       })
