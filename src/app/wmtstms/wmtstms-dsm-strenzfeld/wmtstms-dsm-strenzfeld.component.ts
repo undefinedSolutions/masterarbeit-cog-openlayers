@@ -31,7 +31,7 @@ export class WmtstmsDsmStrenzfeldComponent implements AfterViewInit {
         attributions: AoiStrenzfeld.attributions,
         maxZoom: AoiStrenzfeld.ortho.max,
         minZoom: AoiStrenzfeld.ortho.min,
-        url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts?layer=wmts:dsm_strenzfeld&style=&tilematrixset=WebMercatorQuad_z23&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}'
+        url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts?layer=wmts:dsm_strenzfeld&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/vnd.jpeg-png&TileMatrix={z}&TileCol={x}&TileRow={y}'
       }),
     })
     const map = new Map({

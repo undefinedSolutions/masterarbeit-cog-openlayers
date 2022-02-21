@@ -31,7 +31,7 @@ export class WmtstmsOrthoLindenrainComponent implements AfterViewInit {
         attributions: AoiLindenrain.attributions,
         minZoom: AoiLindenrain.ortho.min,
         maxZoom: AoiLindenrain.ortho.max,
-        url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts?layer=wmts:ortho_lindenrain&style=&tilematrixset=WebMercatorQuad_z23&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}'
+        url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts?layer=wmts:ortho_lindenrain&style=&tilematrixset=WebMercatorQuad&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/vnd.jpeg-png&TileMatrix={z}&TileCol={x}&TileRow={y}'
       }),
     })
     const map = new Map({

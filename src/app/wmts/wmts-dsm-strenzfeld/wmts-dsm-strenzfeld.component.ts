@@ -45,7 +45,7 @@ export class WmtsDsmStrenzfeldComponent implements AfterViewInit {
         attributions: AoiStrenzfeld.attributions,
         url: 'https://geoserver.masterarbeit-cog.de/gwc/service/wmts',
         layer: 'wmts:dsm_strenzfeld',
-        matrixSet: 'WebMercatorQuad_z23',
+        matrixSet: 'WebMercatorQuad',
         format: 'image/vnd.jpeg-png',
         projection: projection,
         tileGrid: new WMTSTileGrid({
