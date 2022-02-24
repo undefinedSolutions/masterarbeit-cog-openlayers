@@ -13,7 +13,7 @@ import { CogOrthoStrenzfeldComponent } from './cog/cog-ortho-strenzfeld/cog-orth
 import { CogDsmStrenzfeldComponent } from './cog/cog-dsm-strenzfeld/cog-dsm-strenzfeld.component';
 import { CogDsmLindenrainComponent } from './cog/cog-dsm-lindenrain/cog-dsm-lindenrain.component';
 import { WmsDsmStrenzfeldComponent } from './wms/wms-dsm-strenzfeld/wms-dsm-strenzfeld.component';
-import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/cog-dms-strenzfeld-style.component';
+import { CogDsmStrenzfeldStyleComponent } from './cog/cog-dsm-strenzfeld-style/cog-dsm-strenzfeld-style.component';
 import { WmsDsmLindenrainComponent } from './wms/wms-dsm-lindenrain/wms-dsm-lindenrain.component';
 import { WmsOrthoLindenrainComponent } from './wms/wms-ortho-lindenrain/wms-ortho-lindenrain.component';
 import { WmsOrthoStrenzfeldComponent } from './wms/wms-ortho-strenzfeld/wms-ortho-strenzfeld.component';
@@ -31,6 +31,7 @@ import { WmtstmsOrthoStrenzfeldComponent } from './wmtstms/wmtstms-ortho-strenzf
 import { WmtstmsDsmStrenzfeldComponent } from './wmtstms/wmtstms-dsm-strenzfeld/wmtstms-dsm-strenzfeld.component';
 import { WmtstmsDsmLindenrainComponent } from './wmtstms/wmtstms-dsm-lindenrain/wmtstms-dsm-lindenrain.component';
 import { CogDsmStrenzfeldStyleRangeComponent } from './cog/cog-dsm-strenzfeld-style-range/cog-dsm-strenzfeld-style-range.component';
+import { WmsDsmStrenzfeldStyleComponent } from './wms/wms-dsm-strenzfeld-style/wms-dsm-strenzfeld-style.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { CogDsmStrenzfeldStyleRangeComponent } from './cog/cog-dsm-strenzfeld-st
     CogDsmStrenzfeldComponent,
     CogDsmLindenrainComponent,
     WmsDsmStrenzfeldComponent,
-    CogDmsStrenzfeldStyleComponent,
+    CogDsmStrenzfeldStyleComponent,
     WmsDsmLindenrainComponent,
     WmsOrthoLindenrainComponent,
     WmsOrthoStrenzfeldComponent,
@@ -62,7 +63,8 @@ import { CogDsmStrenzfeldStyleRangeComponent } from './cog/cog-dsm-strenzfeld-st
     WmtstmsOrthoStrenzfeldComponent,
     WmtstmsDsmStrenzfeldComponent,
     WmtstmsDsmLindenrainComponent,
-    CogDsmStrenzfeldStyleRangeComponent
+    CogDsmStrenzfeldStyleRangeComponent,
+    WmsDsmStrenzfeldStyleComponent
   ],
   imports: [
     BrowserModule,

@@ -11,11 +11,11 @@ import GeoTIFF from 'ol/source/GeoTIFF';
 import TileLayer from 'ol/layer/WebGLTile';
 
 @Component({
-  selector: 'app-cog-dms-strenzfeld-style',
-  templateUrl: './cog-dms-strenzfeld-style.component.html',
-  styleUrls: ['./cog-dms-strenzfeld-style.component.scss']
+  selector: 'app-cog-dsm-strenzfeld-style',
+  templateUrl: './cog-dsm-strenzfeld-style.component.html',
+  styleUrls: ['./cog-dsm-strenzfeld-style.component.scss']
 })
-export class CogDmsStrenzfeldStyleComponent implements AfterViewInit {
+export class CogDsmStrenzfeldStyleComponent implements AfterViewInit {
   @ViewChild('map', { static: false }) map!: ElementRef;
   styleElement: HTMLSelectElement;
   cog: TileLayer;
@@ -72,7 +72,6 @@ export class CogDmsStrenzfeldStyleComponent implements AfterViewInit {
     }
   }
   onChange() {
-    ;
     const style = this.styles[this.styleElement.value];
     this.cog.setStyle(style);
   }
