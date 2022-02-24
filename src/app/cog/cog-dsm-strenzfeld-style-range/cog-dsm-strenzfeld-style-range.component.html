@@ -1,0 +1,21 @@
+<div #map class="map"></div>
+
+<div class="selector">
+  <div>
+    Select Style
+    <select id="style" (change)="onChange()">
+      <option>RdYlGn</option>
+      <option>GnYlRd</option>
+    </select>
+  </div>
+  <div class="range">
+    <div>
+      Min: {{ dsm.min }}
+    </div>
+    <input #minRange (change)="updateMin(minRange.value)" type="range" [min]="dsm.minFixed" [max]="dsm.maxFixed-1" [value]="dsm.min" class="slider" id="minRange">
+    <div>
+      Max: {{ dsm.max }}
+    </div>
+    <input #maxRange (change)="updateMax(maxRange.value)" type="range" [min]="dsm.min+1" [max]="dsm.maxFixed" [value]="dsm.max" class="slider" id="maxRange">
+  </div>
+</div>

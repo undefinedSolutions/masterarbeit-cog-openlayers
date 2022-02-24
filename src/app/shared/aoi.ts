@@ -39,6 +39,10 @@ export const AoiStrenzfeld = {
   dsm: {
     min: 0,
     max: 19,
+    values: {
+      min: 57,
+      max: 112
+    }
   },
   extent: {
     i0:  [1299642, 6765838, 1304883, 6769892],

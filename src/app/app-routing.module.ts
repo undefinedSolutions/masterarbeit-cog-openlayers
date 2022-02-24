@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { CogDsmLindenrainComponent } from './cog/cog-dsm-lindenrain/cog-dsm-lindenrain.component';
 import { CogDsmStrenzfeldComponent } from './cog/cog-dsm-strenzfeld/cog-dsm-strenzfeld.component';
 import { CogDmsStrenzfeldStyleComponent } from './cog/cog-dms-strenzfeld-style/cog-dms-strenzfeld-style.component';
+import { CogDsmStrenzfeldStyleRangeComponent } from './cog/cog-dsm-strenzfeld-style-range/cog-dsm-strenzfeld-style-range.component';
 import { CogOrthoLindenrainComponent } from './cog/cog-ortho-lindenrain/cog-ortho-lindenrain.component';
 import { CogOrthoStrenzfeldComponent } from './cog/cog-ortho-strenzfeld/cog-ortho-strenzfeld.component';
 
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'cog/dsm_strenzfeld_style',
     component: CogDmsStrenzfeldStyleComponent 
+  },
+  {
+    path: 'cog/dsm_strenzfeld_style_range',
+    component: CogDsmStrenzfeldStyleRangeComponent 
   },
   {
     path: 'cog/ortho_lindenrain',

@@ -28,7 +28,7 @@ export class CogDmsStrenzfeldStyleComponent implements AfterViewInit {
   }
 
   styles = {
-    'Test 1': {
+    'RdYlGn': {
       color: [
         'interpolate',
         ['linear'],
@@ -49,7 +49,7 @@ export class CogDmsStrenzfeldStyleComponent implements AfterViewInit {
         [215, 16 ,29],
       ],
     },
-    'Test 2': {
+    'GnYlRd': {
       color: [
         'interpolate',
         ['linear'],
@@ -89,7 +89,7 @@ export class CogDmsStrenzfeldStyleComponent implements AfterViewInit {
           },
         ],
       }),
-      style: this.styles['Test 1'],
+      style: this.styles['RdYlGn'],
     });
     this.cog.getSource().setAttributions(AoiStrenzfeld.attributions);
     const map = new Map({
