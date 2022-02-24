@@ -91,7 +91,6 @@ export class CogDsmStrenzfeldStyleRangeComponent implements AfterViewInit {
 }
   onChange() {
     const style = this.getStyles()[this.styleElement.value];
-    console.log(style);
     this.cog.setStyle(style);
   }
 
